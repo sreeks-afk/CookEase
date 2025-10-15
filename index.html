@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+<div id="welcome-screen">
+
+  <div id="page1">
+    <h1>Welcome to Recipe Book Website</h1>
+    <button id="to-recipe-list">Next</button>
+  </div>
+
+  <div id="page2" style="display:none;">
+    <h2>Select Your Recipe</h2>
+    <div id="search-bar">
+  <input type="text" id="search-input" placeholder="Search for a recipe..." oninput="searchRecipe()" />
+  <button type="button" onclick="searchRecipe()">🔍 Search</button>
+</div>
+
+
+    <form id="recipe-form">
+      <label><input type="radio" name="recipe" value="Pancakes" /> Pancakes</label><br />
+      <label><input type="radio" name="recipe" value="Omelette" /> Omelette</label><br />
+      <label><input type="radio" name="recipe" value="Salad" /> Salad</label><br />
+      <label><input type="radio" name="recipe" value="Pasta" /> Pasta</label><br />
+      <label><input type="radio" name="recipe" value="Soup" /> Soup</label><br />
+      <button type="submit">Start Recipe</button>
+    </form>
+    <button id="back-to-welcome">Back</button>
+  </div>
+
+  <div id="recipe-view" style="display:none;">
+    <h2 id="recipe-title"></h2>
+    <img id="recipe-image" src="" alt="" />
+    <p id="recipe-step"></p>
+    <button id="back-to-ingredients">Back to Ingredients</button>
+  </div>
+
+  
+
+  <div id="ingredients-view" style="display:none;">
+    <h2 id="ingredients-title"></h2>
+    <ul id="ingredients-list" class="ingredient-list"></ul>
+    <button id="start-cooking">Start Cooking!</button>
+    <button id="back-to-selection">Back to list</button>
+  </div>
+
+
+  <div id="recipe-buttons" style="display:none;">
+    <button id="prev-step">Previous</button>
+    <button id="next-step">Next</button>
+    
+    <button id="back-to-list">Back to List</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
